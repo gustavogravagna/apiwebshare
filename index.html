@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="descripcion" content="articulos,noticias,informacion">
+    <meta name="author" content="Gustavo Martin Gravagna">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximun-scale=1.0">
+    <meta name="descripcion" content="Web Transfer API">
+    <title>Web Transfer API</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+  .contenedor {
+      margin: auto;
+      width: 70%;
+      
+  }
+
+  .contenedor .contenedor-hijo {
+      background: #404040;
+      padding: 40px;
+      border-radius: 30px;
+      margin: 25px 0;
+  }
+
+  .contenedor .contenedor-hijo .contenido {
+      color: #fff;
+  }
+
+  .contenedor .compartir {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 20px 50px 0 50px;
+      /* margin-left: 40px;
+      margin-right: 80px; */
+  }
+
+
+  .contenedor .compartir .heart-padre {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .contenedor .compartir .heart-padre .heart-hijo {
+      background: red;
+      color: #fff;
+      height: 35px;
+      border-radius: 5px;
+      margin-bottom: 16px;
+  }
+
+  .contenedor .compartir .heart-padre .heart-hijo-2 p {
+      color: #fff;
+      font-size: 15px;
+      margin-top: 7px;
+  }
+
+
+  .contenedor .compartir .heart-padre .heart-hijo .icono  {
+      padding: 10px;
+  }
+
+  .contenedor .compartir .heart-padre .heart-hijo a {
+      color: #fff;
+      text-decoration: none;
+      cursor: default;
+  }
+
+
+  /* segundo boton */
+
+  .contenedor .compartir .share-padre {
+      display: flex;
+      flex-direction: column;
+      margin: -5px;
+      
+  }
+
+  .contenedor .compartir .share-padre .share-hijo {
+      background: red;
+      color: #fff;
+      text-align: center;
+      height: 47px;
+      width: 47px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+  }
+
+
+  .contenedor .compartir .share-padre .share-hijo .icono-2  {
+      padding: 10px 0;
+      font-size: 25px;
+  }
+
+  .contenedor .compartir .share-padre .share-hijo a {
+      color: #fff;
+      text-decoration: none;
+      cursor: default;
+      font-size: 15px;
+  }
+
+  .contenedor .compartir .share-padre .share-hijo-2 .share-i {
+      border: none;
+      background: #404040;
+      color: #fff;
+      font-size: 15px;
+  }
+
+  @media screen and (max-width:500px){
+      .contenedor-hijo .compartir {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+      }
+
+      .heart-hijo-2 {
+          margin-bottom: 30px;
+          margin-top: -18px;
+      }
+  }
+    </style>
+</head>
+
+<body>
+
+    <!------------------------------------ PROGRAMACION HTML -------------------------------->
+
+
+    <h1>TITULO <a href=""><i class="fa fa-university"></i></a> </h1>
+
+    <!-- SECCION DEL PRIMER ARTICULO -->
+    <div class="contenedor">
+        <div class="contenedor-hijo">
+            <div class="contenido">
+                <p id="etiqueta">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+            </div>
+
+            <div class="compartir">
+                <div class="heart-padre">
+                    <div class="heart-hijo">
+                        <a href=""><i class="icono fa fa-heart"></i> 1 </a>
+                    </div>
+                    <div class="heart-hijo-2">
+                        <p>Favorito</p>
+                    </div>
+                </div>
+
+
+                <div class="share-padre">
+                    <div class="share-hijo">
+                        <a href=""><i class="icono-2 fas fa-share-alt"></i></a>
+                    </div>
+                    <div class="share-hijo-2">
+                        <!-- <button id="button">Compartir</button> -->
+                        <button class="share-i" id="button">Compartir</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+
+    
+    <!-- SECCION DEL SEGUNDO ARTICULO -->
+    <div class="contenedor">
+        <div class="contenedor-hijo">
+            <div class="contenido">
+                <p id="etiqueta2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+            </div>
+
+            <div class="compartir">
+
+                <div class="heart-padre">
+                    <div class="heart-hijo">
+                        <a href=""><i class=" icono fa fa-heart"></i> 1 </a>
+                    </div>
+                    <div class="heart-hijo-2">
+                        <p>Me gusta</p>
+                    </div>
+                </div>
+
+
+                <div class="share-padre">
+                    <div class="share-hijo">
+                        <a href=""><i class="icono-2 fas fa-share-alt"></i></a>
+                    </div>
+                    <div class="share-hijo-2">
+                        <button class="share-i" id="button-2">Compartir</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <!-- SECCION DEL SEGUNDO ARTICULO -->
+    <!------------------------------------ PROGRAMACION JAVACRIPT -------------------------------->
+    <script>
+        // BOTON 1
+        const $button = document.querySelector('#button')
+        const valor = document.getElementById('etiqueta')
+        if ('share' in navigator) {
+          $button.addEventListener('click', share)
+          function share() {
+            navigator.share({
+              title: 'Probando COPIAR CONTENIDO Share API',
+              text: valor.innerHTML,
+              url: 'https://www.google.com/',
+            })
+            .then(()=>{
+              alert('hemos logrado compartir')
+            })
+            .catch(()=>{
+              alert('no se pudo compartir, prueba usando https en un navegador móvil')
+            })
+          }
+        } else {
+          alert('No está disponible el API de web share')
+        }
+
+        // BOTON 2
+        
+
+
+        const $button2 = document.querySelector('#button-2')
+        const valor2 = document.getElementById('etiqueta2')
+        if ('share' in navigator) {
+          $button2.addEventListener('click', share)
+          function share() {
+            navigator.share({
+              title: 'Probando COPIAR CONTENIDO Share API',
+              text: valor2.innerHTML,
+              url: 'https://www.google.com/',
+            })
+            .then(()=>{
+              alert('hemos logrado compartir')
+            })
+            .catch(()=>{
+              alert('no se pudo compartir, prueba usando https en un navegador móvil')
+            })
+          }
+        } else {
+          alert('No está disponible el API de web share')
+        }
+
+    </script>
+</body>
+
+</html>
+

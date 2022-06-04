@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    margin: auto;
+    width: 70%;
+    
+}
+
+.contenedor .contenedor-hijo {
+    background: #404040;
+    padding: 40px;
+    border-radius: 30px;
+    margin: 25px 0;
+}
+
+.contenedor .contenedor-hijo .contenido {
+    color: #fff;
+}
+
+.contenedor .compartir {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 50px 0 50px;
+    /* margin-left: 40px;
+    margin-right: 80px; */
+}
+
+
+.contenedor .compartir .heart-padre {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor .compartir .heart-padre .heart-hijo {
+    background: red;
+    color: #fff;
+    height: 35px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.contenedor .compartir .heart-padre .heart-hijo-2 p {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 7px;
+}
+
+
+.contenedor .compartir .heart-padre .heart-hijo .icono  {
+    padding: 10px;
+}
+
+.contenedor .compartir .heart-padre .heart-hijo a {
+    color: #fff;
+    text-decoration: none;
+    cursor: default;
+}
+
+
+/* segundo boton */
+
+.contenedor .compartir .share-padre {
+    display: flex;
+    flex-direction: column;
+    margin: -5px;
+}
+
+.contenedor .compartir .share-padre .share-hijo {
+    background: red;
+    color: #fff;
+    text-align: center;
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+
+.contenedor .compartir .share-padre .share-hijo .icono-2  {
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.contenedor .compartir .share-padre .share-hijo a {
+    color: #fff;
+    text-decoration: none;
+    cursor: default;
+    font-size: 15px;
+}
+
+.contenedor .compartir .share-padre .share-hijo-2 .share-i {
+    border: none;
+    background: #404040;
+    color: #fff;
+    font-size: 15px;
+}
+
+@media screen and (max-width:500px){
+    .contenedor-hijo .compartir {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .heart-hijo-2 {
+        margin-bottom: 30px;
+        margin-top: -18px;
+    }
+}
